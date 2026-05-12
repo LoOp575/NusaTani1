@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komoditas — NusaTani</title>
+<meta name="description" content="Data harga komoditas pertanian Indonesia realtime - gabah, jagung, singkong, cabai, jahe.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="navbar" class="navbar">
+<div class="container nav-inner">
+<a href="/" class="nav-brand"><span class="brand-icon">◈</span> NusaTani</a>
+<div class="nav-links" id="navLinks">
+<a href="/">Dashboard</a>
+<a href="commodities.html" class="active">Komoditas</a>
+<a href="province.html">Provinsi</a>
+<a href="ai-assistant.html">AI Assistant</a>
+<a href="weather.html">Cuaca</a>
+<a href="news.html">Berita</a>
+</div>
+<div class="nav-actions">
+<button id="darkToggle" class="icon-btn" aria-label="Toggle dark mode">
+<svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+<svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+</button>
+<button id="mobileMenu" class="icon-btn mobile-only"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="page-header">
+<h1>Harga Komoditas</h1>
+<p>Data harga komoditas pertanian Indonesia terkini dengan grafik tren dan insight pasar.</p>
+</div>
+
+<div class="page-content">
+<!-- Price Chart -->
+<div class="card" style="margin-bottom:24px">
+<div class="card-header">
+<h3>Grafik Harga 30 Hari Terakhir</h3>
+<div class="section-label" style="margin:0">Update: 12 Mei 2025</div>
+</div>
+<div style="overflow:hidden;border-radius:8px">
+<svg viewBox="0 0 700 220" width="100%" style="display:block">
+<defs>
+<linearGradient id="gGabah" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity=".15"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient>
+</defs>
+<!-- Grid -->
+<line x1="50" y1="30" x2="680" y2="30" stroke="currentColor" stroke-opacity=".06" stroke-dasharray="4"/>
+<line x1="50" y1="70" x2="680" y2="70" stroke="currentColor" stroke-opacity=".06" stroke-dasharray="4"/>
+<line x1="50" y1="110" x2="680" y2="110" stroke="currentColor" stroke-opacity=".06" stroke-dasharray="4"/>
+<line x1="50" y1="150" x2="680" y2="150" stroke="currentColor" stroke-opacity=".06" stroke-dasharray="4"/>
+<!-- Labels -->
+<text x="10" y="34" font-size="10" fill="currentColor" opacity=".4">6K</text>
+<text x="10" y="74" font-size="10" fill="currentColor" opacity=".4">5K</text>
+<text x="10" y="114" font-size="10" fill="currentColor" opacity=".4">4K</text>
+<text x="10" y="154" font-size="10" fill="currentColor" opacity=".4">3K</text>
+<text x="50" y="200" font-size="10" fill="currentColor" opacity=".4">12 Apr</text>
+<text x="200" y="200" font-size="10" fill="currentColor" opacity=".4">19 Apr</text>
+<text x="370" y="200" font-size="10" fill="currentColor" opacity=".4">26 Apr</text>
+<text x="540" y="200" font-size="10" fill="currentColor" opacity=".4">3 Mei</text>
+<text x="640" y="200" font-size="10" fill="currentColor" opacity=".4">12 Mei</text>
+<!-- Gabah -->
+<path d="M50,120 Q100,115 150,108 T250,95 T350,85 T450,72 T550,58 T650,42 T680,38" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M50,120 Q100,115 150,108 T250,95 T350,85 T450,72 T550,58 T650,42 T680,38 L680,180 L50,180Z" fill="url(#gGabah)"/>
+<!-- Jagung -->
+<path d="M50,100 Q100,102 150,98 T250,105 T350,100 T450,92 T550,88 T650,82 T680,78" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
+<!-- Singkong -->
+<path d="M50,145 Q100,143 150,146 T250,142 T350,140 T450,138 T550,136 T650,133 T680,130" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,3"/>
+<!-- Cabai -->
+<path d="M50,45 Q100,50 150,55 T250,62 T350,70 T450,78 T550,85 T650,90 T680,92" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+<!-- Legend -->
+<circle cx="80" cy="210" r="4" fill="#16a34a"/><text x="88" y="214" font-size="10" fill="currentColor" opacity=".6">Gabah</text>
+<circle cx="150" cy="210" r="4" fill="#eab308"/><text x="158" y="214" font-size="10" fill="currentColor" opacity=".6">Jagung</text>
+<circle cx="220" cy="210" r="4" fill="#3b82f6"/><text x="228" y="214" font-size="10" fill="currentColor" opacity=".6">Singkong</text>
+<circle cx="305" cy="210" r="4" fill="#ef4444"/><text x="313" y="214" font-size="10" fill="currentColor" opacity=".6">Cabai</text>
+</svg>
+</div>
+</div>
+
+<!-- Price Table -->
+<div class="card">
+<div class="card-header">
+<h3>Harga Komoditas Hari Ini</h3>
+</div>
+<table class="data-table">
+<thead>
+<tr><th>Komoditas</th><th>Harga/kg</th><th>Perubahan</th><th>Tren 7 Hari</th><th>Insight</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🌾 Gabah</strong></td>
+<td>Rp 5.420</td>
+<td><span class="tag green">+2.1%</span></td>
+<td>↗️ Naik stabil</td>
+<td>Permintaan tinggi menjelang Ramadhan</td>
+</tr>
+<tr>
+<td><strong>🌽 Jagung</strong></td>
+<td>Rp 4.180</td>
+<td><span class="tag green">+1.3%</span></td>
+<td>↗️ Naik</td>
+<td>Stok pakan ternak meningkat</td>
+</tr>
+<tr>
+<td><strong>🥔 Singkong</strong></td>
+<td>Rp 2.850</td>
+<td><span class="tag green">+0.5%</span></td>
+<td>→ Stabil</td>
+<td>Pasar domestik stabil</td>
+</tr>
+<tr>
+<td><strong>🌶️ Cabai Rawit</strong></td>
+<td>Rp 38.500</td>
+<td><span class="tag red">-4.2%</span></td>
+<td>↘️ Turun</td>
+<td>Panen raya di Jawa Timur</td>
+</tr>
+<tr>
+<td><strong>🫚 Jahe</strong></td>
+<td>Rp 22.100</td>
+<td><span class="tag green">+0.8%</span></td>
+<td>↗️ Naik perlahan</td>
+<td>Ekspor ke Malaysia meningkat</td>
+</tr>
+<tr>
+<td><strong>🧅 Bawang Merah</strong></td>
+<td>Rp 32.400</td>
+<td><span class="tag red">-1.5%</span></td>
+<td>↘️ Turun</td>
+<td>Supply dari Brebes melimpah</td>
+</tr>
+<tr>
+<td><strong>🍚 Beras Premium</strong></td>
+<td>Rp 14.200</td>
+<td><span class="tag green">+0.3%</span></td>
+<td>→ Stabil</td>
+<td>Harga terkontrol BULOG</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-bottom"><p>© 2025 NusaTani. Platform AI Agriculture Intelligence Indonesia.</p></div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

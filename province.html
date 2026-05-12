@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Provinsi — NusaTani</title>
+<meta name="description" content="Data pertanian per provinsi Indonesia - perbandingan produksi, luas lahan, dan produktivitas.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="navbar" class="navbar">
+<div class="container nav-inner">
+<a href="/" class="nav-brand"><span class="brand-icon">◈</span> NusaTani</a>
+<div class="nav-links" id="navLinks">
+<a href="/">Dashboard</a>
+<a href="commodities.html">Komoditas</a>
+<a href="province.html" class="active">Provinsi</a>
+<a href="ai-assistant.html">AI Assistant</a>
+<a href="weather.html">Cuaca</a>
+<a href="news.html">Berita</a>
+</div>
+<div class="nav-actions">
+<button id="darkToggle" class="icon-btn"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
+<button id="mobileMenu" class="icon-btn mobile-only"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="page-header">
+<h1>Data Pertanian Provinsi</h1>
+<p>Perbandingan produksi pertanian, luas lahan, dan produktivitas antar provinsi Indonesia.</p>
+</div>
+
+<div class="page-content">
+<!-- Map Placeholder -->
+<div class="map-placeholder" style="margin-bottom:24px">
+<div style="text-align:center">
+<div style="font-size:3rem;margin-bottom:8px">🗺️</div>
+<p>Peta Interaktif Indonesia</p>
+<small style="color:var(--text-m)">Klik provinsi untuk melihat detail data pertanian</small>
+</div>
+</div>
+
+<!-- Province Stats -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px" class="province-stats">
+<div class="card" style="text-align:center">
+<div style="font-size:1.5rem;font-weight:800;color:var(--green)">34</div>
+<div style="font-size:.8rem;color:var(--text-s)">Provinsi Terdata</div>
+</div>
+<div class="card" style="text-align:center">
+<div style="font-size:1.5rem;font-weight:800;color:var(--blue)">7.46 Jt Ha</div>
+<div style="font-size:.8rem;color:var(--text-s)">Total Luas Sawah</div>
+</div>
+<div class="card" style="text-align:center">
+<div style="font-size:1.5rem;font-weight:800;color:var(--gold)">5.2 Ton/Ha</div>
+<div style="font-size:.8rem;color:var(--text-s)">Rata-rata Produktivitas</div>
+</div>
+</div>
+
+<!-- Province Table -->
+<div class="card">
+<div class="card-header">
+<h3>Perbandingan Produksi Padi Per Provinsi</h3>
+</div>
+<table class="data-table">
+<thead>
+<tr><th>#</th><th>Provinsi</th><th>Produksi (Ton)</th><th>Luas Lahan (Ha)</th><th>Produktivitas</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><strong>Jawa Barat</strong></td><td>9.420.000</td><td>1.850.000</td><td>5.09 Ton/Ha</td><td><span class="tag green">Di atas rata-rata</span></td></tr>
+<tr><td>2</td><td><strong>Jawa Timur</strong></td><td>10.150.000</td><td>1.920.000</td><td>5.29 Ton/Ha</td><td><span class="tag green">Di atas rata-rata</span></td></tr>
+<tr><td>3</td><td><strong>Jawa Tengah</strong></td><td>9.680.000</td><td>1.780.000</td><td>5.44 Ton/Ha</td><td><span class="tag green">Di atas rata-rata</span></td></tr>
+<tr><td>4</td><td><strong>Sulawesi Selatan</strong></td><td>5.740.000</td><td>1.120.000</td><td>5.13 Ton/Ha</td><td><span class="tag green">Di atas rata-rata</span></td></tr>
+<tr><td>5</td><td><strong>Sumatera Barat</strong></td><td>2.580.000</td><td>520.000</td><td>4.96 Ton/Ha</td><td><span class="tag green">Rata-rata</span></td></tr>
+<tr><td>6</td><td><strong>NTB</strong></td><td>2.240.000</td><td>460.000</td><td>4.87 Ton/Ha</td><td><span class="tag green">Rata-rata</span></td></tr>
+<tr><td>7</td><td><strong>Sumatera Utara</strong></td><td>3.870.000</td><td>820.000</td><td>4.72 Ton/Ha</td><td><span class="tag red">Di bawah rata-rata</span></td></tr>
+<tr><td>8</td><td><strong>Kalimantan Selatan</strong></td><td>2.100.000</td><td>480.000</td><td>4.38 Ton/Ha</td><td><span class="tag red">Di bawah rata-rata</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container"><div class="footer-bottom"><p>© 2025 NusaTani. Platform AI Agriculture Intelligence Indonesia.</p></div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Assistant — NusaTani</title>
+<meta name="description" content="NusaTani AI Agriculture Assistant - tanya apapun tentang pertanian Indonesia.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="navbar" class="navbar">
+<div class="container nav-inner">
+<a href="/" class="nav-brand"><span class="brand-icon">◈</span> NusaTani</a>
+<div class="nav-links" id="navLinks">
+<a href="/">Dashboard</a>
+<a href="commodities.html">Komoditas</a>
+<a href="province.html">Provinsi</a>
+<a href="ai-assistant.html" class="active">AI Assistant</a>
+<a href="weather.html">Cuaca</a>
+<a href="news.html">Berita</a>
+</div>
+<div class="nav-actions">
+<button id="darkToggle" class="icon-btn"><svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
+<button id="mobileMenu" class="icon-btn mobile-only"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="page-header">
+<h1>🤖 AI Agriculture Assistant</h1>
+<p>Tanya apapun tentang pertanian Indonesia — rekomendasi tanam, pupuk, hama, harga, dan cuaca.</p>
+</div>
+
+<div class="page-content">
+<div class="card">
+<div class="chat-full">
+<div class="chat-messages" id="chatMessages">
+<div class="chat-msg ai">
+<div class="ai-avatar">◈</div>
+<div class="chat-text">Halo! Saya NusaTani AI, asisten pertanian digital Anda. Saya bisa membantu dengan:<br><br>• Rekomendasi tanaman & pupuk<br>• Analisis harga komoditas<br>• Prediksi cuaca untuk pertanian<br>• Identifikasi hama & penyakit<br>• Data produksi nasional<br><br>Silakan tanya apapun!</div>
+</div>
+<div class="chat-msg user">Tanaman apa yang cocok ditanam bulan Mei di Jawa Barat?</div>
+<div class="chat-msg ai">
+<div class="ai-avatar">◈</div>
+<div class="chat-text">Berdasarkan analisis data cuaca dan kondisi tanah bulan Mei di Jawa Barat:<br><br><strong>Rekomendasi Utama:</strong><br>1. <strong>Padi (var. Ciherang/Inpari 32)</strong> — cocok awal musim kemarau, butuh irigasi baik<br>2. <strong>Jagung hibrida</strong> — optimal di lahan kering dengan drainase baik<br>3. <strong>Kacang tanah</strong> — cocok sebagai tanaman sela<br><br><strong>Kondisi pendukung:</strong><br>• Suhu: 26-30°C ✓<br>• Kelembapan: 70-80% ✓<br>• Curah hujan menurun ✓<br><br>⚠️ <em>Pastikan ketersediaan air irigasi karena memasuki musim kemarau.</em></div>
+</div>
+<div class="chat-msg user">Kenapa daun padi saya menguning?</div>
+<div class="chat-msg ai">
+<div class="ai-avatar">◈</div>
+<div class="chat-text">Daun padi menguning bisa disebabkan beberapa faktor:<br><br><strong>Penyebab umum:</strong><br>1. <strong>Defisiensi Nitrogen</strong> — paling sering, daun tua menguning duluan<br>2. <strong>Kelebihan air (waterlogging)</strong> — akar kekurangan oksigen<br>3. <strong>Serangan hama wereng</strong> — cek bagian bawah batang<br>4. <strong>Penyakit tungro</strong> — jika disertai kerdil<br><br><strong>Solusi cepat:</strong><br>• Aplikasi urea 50-75 kg/Ha jika defisiensi N<br>• Perbaiki drainase jika tergenang<br>• Semprot insektisida jika ada wereng<br><br>📸 <em>Untuk diagnosis lebih akurat, upload foto tanaman Anda.</em></div>
+</div>
+</div>
+<div class="chat-input-area">
+<input type="text" class="chat-input" id="chatInput" placeholder="Tanya tentang pertanian...">
+<button class="btn btn-primary" id="chatSend">Kirim</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container"><div class="footer-bottom"><p>© 2025 NusaTani. Platform AI Agriculture Intelligence Indonesia.</p></div></div>
+</footer>
+<script src="script.js"></script>
+<script>
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const chatMessages = document.getElementById('chatMessages');
+const responses = [
+  'Berdasarkan data kami, harga gabah diprediksi naik 3-5% dalam 2 minggu ke depan. Saat ini adalah waktu yang baik untuk menahan penjualan jika memungkinkan.',
+  'Untuk lahan di dataran rendah dengan pH tanah 5.5-6.5, saya merekomendasikan pupuk NPK 15-15-15 dengan dosis 300 kg/Ha untuk padi fase vegetatif.',
+  'Cuaca minggu depan diprediksi cerah dengan kemungkinan hujan ringan. Kondisi ini optimal untuk penyemprotan pestisida dan pemupukan susulan.',
+  'Berdasarkan data produksi 5 tahun terakhir, varietas Inpari 32 memberikan hasil terbaik di wilayah Jawa Barat dengan rata-rata 7.2 ton/Ha.',
+  'Untuk mengatasi hama wereng cokelat, aplikasikan insektisida berbahan aktif imidakloprid 2ml/liter air. Semprot pada pagi atau sore hari.'
+];
+let resIdx = 0;
+function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  chatMessages.innerHTML += '<div class="chat-msg user">' + text + '</div>';
+  chatInput.value = '';
+  setTimeout(() => {
+    chatMessages.innerHTML += '<div class="chat-msg ai"><div class="ai-avatar">◈</div><div class="chat-text">' + responses[resIdx % responses.length] + '</div></div>';
+    resIdx++;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 800);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+chatSend.addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+</script>
+</body>
+</html>
