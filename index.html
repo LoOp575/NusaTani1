@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NusaTani — Masa Depan Pertanian Digital Indonesia</title>
+<meta name="description" content="Platform data pertanian, AI, dan ekosistem digital untuk membantu petani Indonesia berkembang.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300">
+
+<!-- Loading Screen -->
+<div id="loader" class="loader-overlay">
+<div class="loader-content">
+<div class="loader-logo">🌾</div>
+<div class="loader-bar"><div class="loader-progress"></div></div>
+</div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar">
+<div class="container navbar-inner">
+<a href="#" class="navbar-brand">
+<span class="brand-icon">🌾</span>
+<span class="brand-text">NusaTani</span>
+</a>
+<div class="navbar-links" id="navLinks">
+<a href="#features">Fitur</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#ai">AI</a>
+<a href="#token">Token</a>
+<a href="#roadmap">Roadmap</a>
+</div>
+<div class="navbar-actions">
+<button id="darkToggle" class="btn-icon" aria-label="Toggle dark mode">
+<svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+<svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+<button class="btn btn-primary btn-sm">Mulai Sekarang</button>
+<button id="menuToggle" class="btn-icon mobile-only" aria-label="Menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+<div class="hero-bg">
+<div class="hero-gradient"></div>
+<div class="hero-particles" id="particles"></div>
+<div class="hero-grid"></div>
+</div>
+<div class="container hero-content">
+<div class="hero-badge animate-fade-up">
+<span class="badge-dot"></span>
+Platform Pertanian Digital #1 Indonesia
+</div>
+<h1 class="hero-title animate-fade-up delay-1">
+NusaTani — Masa Depan<br>
+<span class="text-gradient">Pertanian Digital Indonesia</span>
+</h1>
+<p class="hero-subtitle animate-fade-up delay-2">
+Platform data pertanian, AI, dan ekosistem digital untuk membantu petani Indonesia berkembang.
+</p>
+<div class="hero-buttons animate-fade-up delay-3">
+<button class="btn btn-primary btn-lg">
+<span>Mulai Sekarang</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</button>
+<button class="btn btn-outline btn-lg">
+<span>Lihat Data Pertanian</span>
+</button>
+</div>
+<div class="hero-stats animate-fade-up delay-4">
+<div class="hero-stat"><span class="hero-stat-num">50K+</span><span class="hero-stat-label">Petani Aktif</span></div>
+<div class="hero-stat-divider"></div>
+<div class="hero-stat"><span class="hero-stat-num">12 Provinsi</span><span class="hero-stat-label">Terjangkau</span></div>
+<div class="hero-stat-divider"></div>
+<div class="hero-stat"><span class="hero-stat-num">99.9%</span><span class="hero-stat-label">Uptime</span></div>
+</div>
+</div>
+</section>
+
+<!-- Statistics Section -->
+<section id="stats" class="stats-section">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-card" data-count="52847" data-suffix="+">
+<div class="stat-icon">👨‍🌾</div>
+<div class="stat-number">0</div>
+<div class="stat-label">Total Petani</div>
+</div>
+<div class="stat-card" data-count="128500" data-suffix=" Ha">
+<div class="stat-icon">🌍</div>
+<div class="stat-number">0</div>
+<div class="stat-label">Total Lahan</div>
+</div>
+<div class="stat-card" data-count="847" data-suffix="+">
+<div class="stat-icon">🌾</div>
+<div class="stat-number">0</div>
+<div class="stat-label">Komoditas Aktif</div>
+</div>
+<div class="stat-card" data-count="2400000" data-suffix=" Ton">
+<div class="stat-icon">📊</div>
+<div class="stat-number">0</div>
+<div class="stat-label">Data Panen</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+<div class="container">
+<div class="section-header">
+<span class="section-badge">Fitur Utama</span>
+<h2 class="section-title">Solusi Lengkap untuk <span class="text-gradient">Pertanian Modern</span></h2>
+<p class="section-desc">Teknologi terdepan yang dirancang khusus untuk ekosistem pertanian Indonesia</p>
+</div>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">📈</div></div>
+<h3>Data Harga Komoditas</h3>
+<p>Pantau harga komoditas real-time dari seluruh pasar di Indonesia dengan analitik mendalam.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">📅</div></div>
+<h3>Kalender Tanam</h3>
+<p>Jadwal tanam optimal berbasis data cuaca, iklim, dan kondisi tanah di daerah Anda.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">🤖</div></div>
+<h3>Prediksi Panen AI</h3>
+<p>Machine learning yang memprediksi hasil panen berdasarkan ribuan variabel data historis.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">🌤️</div></div>
+<h3>Monitoring Cuaca</h3>
+<p>Data cuaca hyperlocal dengan akurasi tinggi untuk perencanaan pertanian yang lebih baik.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">🛒</div></div>
+<h3>Marketplace Pertanian</h3>
+<p>Jual hasil panen langsung ke pembeli tanpa perantara. Harga adil untuk petani.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon-wrap"><div class="feature-icon">📊</div></div>
+<h3>Dashboard Petani</h3>
+<p>Pantau semua aktivitas pertanian dalam satu dashboard yang intuitif dan mudah digunakan.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Dashboard Preview Section -->
+<section id="dashboard" class="dashboard-section">
+<div class="container">
+<div class="section-header">
+<span class="section-badge">Dashboard</span>
+<h2 class="section-title">Dashboard <span class="text-gradient">Futuristik</span></h2>
+<p class="section-desc">Semua data pertanian Anda dalam satu tampilan yang powerful</p>
+</div>
+<div class="dashboard-preview">
+<div class="dashboard-mockup">
+<div class="mockup-header">
+<div class="mockup-dots"><span></span><span></span><span></span></div>
+<div class="mockup-title">NusaTani Dashboard</div>
+</div>
+<div class="mockup-body">
+<div class="mockup-sidebar">
+<div class="sidebar-item active">📊 Overview</div>
+<div class="sidebar-item">🌾 Lahan Saya</div>
+<div class="sidebar-item">📈 Harga Pasar</div>
+<div class="sidebar-item">🤖 AI Prediksi</div>
+<div class="sidebar-item">🌤️ Cuaca</div>
+</div>
+<div class="mockup-content">
+<div class="mockup-cards">
+<div class="mini-card green"><div class="mini-label">Harga Gabah</div><div class="mini-value">Rp 5.200/kg</div><div class="mini-change up">+2.4%</div></div>
+<div class="mini-card blue"><div class="mini-label">Cuaca Hari Ini</div><div class="mini-value">28°C</div><div class="mini-change">Cerah Berawan</div></div>
+<div class="mini-card gold"><div class="mini-label">Progress Panen</div><div class="mini-value">78%</div><div class="mini-change up">+5% minggu ini</div></div>
+<div class="mini-card purple"><div class="mini-label">Lahan Aktif</div><div class="mini-value">4.2 Ha</div><div class="mini-change">3 lokasi</div></div>
+</div>
+<div class="mockup-chart">
+<div class="chart-title">Harga Gabah — 30 Hari Terakhir</div>
+<div class="chart-area">
+<svg viewBox="0 0 400 120" class="chart-svg">
+<defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity="0.3"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0"/></linearGradient></defs>
+<path d="M0,100 Q20,90 40,85 T80,70 T120,75 T160,60 T200,55 T240,45 T280,50 T320,35 T360,30 T400,20" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+<path d="M0,100 Q20,90 40,85 T80,70 T120,75 T160,60 T200,55 T240,45 T280,50 T320,35 T360,30 T400,20 L400,120 L0,120 Z" fill="url(#chartGrad)"/>
+</svg>
+</div>
+</div>
+<div class="mockup-activity">
+<div class="activity-title">Aktivitas Terbaru</div>
+<div class="activity-item"><span class="activity-dot green"></span>Panen padi — Lahan Subang <span class="activity-time">2 jam lalu</span></div>
+<div class="activity-item"><span class="activity-dot blue"></span>Update cuaca tersedia <span class="activity-time">4 jam lalu</span></div>
+<div class="activity-item"><span class="activity-dot gold"></span>Harga jagung naik 3.2% <span class="activity-time">6 jam lalu</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AI Agriculture Section -->
+<section id="ai" class="ai-section">
+<div class="container">
+<div class="ai-grid">
+<div class="ai-content">
+<span class="section-badge">AI Agriculture</span>
+<h2 class="section-title">Kecerdasan Buatan untuk <span class="text-gradient">Pertanian Presisi</span></h2>
+<p class="section-desc">NusaTani AI menganalisis jutaan data poin untuk memberikan rekomendasi paling akurat bagi petani Indonesia.</p>
+<div class="ai-features">
+<div class="ai-feature-item">
+<div class="ai-feature-icon">💊</div>
+<div><h4>Rekomendasi Pupuk</h4><p>AI menganalisis kondisi tanah dan tanaman untuk rekomendasi pupuk yang tepat sasaran.</p></div>
+</div>
+<div class="ai-feature-item">
+<div class="ai-feature-icon">📊</div>
+<div><h4>Prediksi Hasil Panen</h4><p>Prediksi akurat berbasis data historis, cuaca, dan kondisi lahan real-time.</p></div>
+</div>
+<div class="ai-feature-item">
+<div class="ai-feature-icon">🔬</div>
+<div><h4>Deteksi Penyakit Tanaman</h4><p>Upload foto tanaman dan AI akan mendeteksi penyakit serta memberikan solusi.</p></div>
+</div>
+<div class="ai-feature-item">
+<div class="ai-feature-icon">💰</div>
+<div><h4>Analisis Harga Pasar</h4><p>Prediksi tren harga komoditas untuk strategi penjualan yang optimal.</p></div>
+</div>
+</div>
+</div>
+<div class="ai-visual">
+<div class="ai-card-visual">
+<div class="ai-brain">
+<div class="brain-ring ring-1"></div>
+<div class="brain-ring ring-2"></div>
+<div class="brain-ring ring-3"></div>
+<div class="brain-center">🧠</div>
+</div>
+<div class="ai-data-points">
+<span class="data-point dp-1">Tanah</span>
+<span class="data-point dp-2">Cuaca</span>
+<span class="data-point dp-3">Harga</span>
+<span class="data-point dp-4">Panen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Token Ecosystem Section -->
+<section id="token" class="token-section">
+<div class="container">
+<div class="section-header">
+<span class="section-badge">Ecosystem</span>
+<h2 class="section-title">Token <span class="text-gradient">NusaTani</span></h2>
+<p class="section-desc">Ekosistem digital yang memberdayakan seluruh rantai nilai pertanian</p>
+</div>
+<div class="token-grid">
+<div class="token-card">
+<div class="token-card-icon">🎁</div>
+<h3>Reward Komunitas</h3>
+<p>Dapatkan reward dari kontribusi data, berbagi pengetahuan, dan aktivitas di platform.</p>
+</div>
+<div class="token-card">
+<div class="token-card-icon">💳</div>
+<h3>Transaksi Marketplace</h3>
+<p>Gunakan token untuk transaksi jual-beli di marketplace dengan biaya minimal.</p>
+</div>
+<div class="token-card">
+<div class="token-card-icon">📈</div>
+<h3>Staking Ekosistem</h3>
+<p>Stake token untuk mendukung ekosistem dan dapatkan yield dari pertumbuhan platform.</p>
+</div>
+<div class="token-card">
+<div class="token-card-icon">🏛️</div>
+<h3>Governance</h3>
+<p>Ikut serta dalam pengambilan keputusan platform melalui mekanisme voting terdesentralisasi.</p>
+</div>
+</div>
+<div class="token-visual">
+<div class="token-circle">
+<div class="token-inner">
+<span class="token-symbol">🌾</span>
+<span class="token-name">$NSTANI</span>
+</div>
+<div class="token-orbit orbit-1"><span></span></div>
+<div class="token-orbit orbit-2"><span></span></div>
+<div class="token-orbit orbit-3"><span></span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Community Section -->
+<section id="community" class="community-section">
+<div class="container">
+<div class="section-header">
+<span class="section-badge">Komunitas</span>
+<h2 class="section-title">Bergabung dengan <span class="text-gradient">Komunitas</span></h2>
+<p class="section-desc">Ribuan petani dan investor sudah terhubung di ekosistem NusaTani</p>
+</div>
+<div class="community-grid">
+<div class="community-card">
+<div class="community-icon">💬</div>
+<h3>Forum Petani</h3>
+<p>Diskusi, tanya jawab, dan berbagi pengalaman dengan sesama petani seluruh Indonesia.</p>
+<div class="community-stat">12.5K+ anggota aktif</div>
+</div>
+<div class="community-card">
+<div class="community-icon">🌾</div>
+<h3>Sharing Hasil Panen</h3>
+<p>Bagikan pencapaian panen Anda dan dapatkan inspirasi dari petani sukses lainnya.</p>
+<div class="community-stat">8.2K+ post per bulan</div>
+</div>
+<div class="community-card">
+<div class="community-icon">🌐</div>
+<h3>Komunitas Digital</h3>
+<p>Event virtual, webinar, dan workshop gratis untuk meningkatkan skill pertanian digital.</p>
+<div class="community-stat">200+ event per tahun</div>
+</div>
+<div class="community-card">
+<div class="community-icon">🤝</div>
+<h3>Investor & Petani</h3>
+<p>Platform kolaborasi antara investor dan petani untuk pembiayaan yang adil dan transparan.</p>
+<div class="community-stat">Rp 15M+ dana tersalurkan</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Roadmap Section -->
+<section id="roadmap" class="roadmap-section">
+<div class="container">
+<div class="section-header">
+<span class="section-badge">Roadmap</span>
+<h2 class="section-title">Perjalanan <span class="text-gradient">NusaTani</span></h2>
+<p class="section-desc">Rencana pengembangan platform menuju ekosistem pertanian digital terlengkap</p>
+</div>
+<div class="roadmap-timeline">
+<div class="timeline-line"></div>
+<div class="roadmap-item">
+<div class="roadmap-dot active"></div>
+<div class="roadmap-card">
+<span class="roadmap-phase">Phase 1 — Q1 2025</span>
+<h3>Beta Platform</h3>
+<p>Peluncuran platform beta dengan fitur data harga, cuaca, dan dashboard petani dasar.</p>
+<div class="roadmap-status done">✓ Selesai</div>
+</div>
+</div>
+<div class="roadmap-item">
+<div class="roadmap-dot active"></div>
+<div class="roadmap-card">
+<span class="roadmap-phase">Phase 2 — Q2 2025</span>
+<h3>AI Integration</h3>
+<p>Integrasi AI untuk prediksi panen, deteksi penyakit, dan rekomendasi pupuk.</p>
+<div class="roadmap-status progress">◐ Dalam Pengembangan</div>
+</div>
+</div>
+<div class="roadmap-item">
+<div class="roadmap-dot"></div>
+<div class="roadmap-card">
+<span class="roadmap-phase">Phase 3 — Q3 2025</span>
+<h3>Marketplace</h3>
+<p>Marketplace B2B dan B2C untuk jual-beli komoditas pertanian langsung.</p>
+<div class="roadmap-status upcoming">○ Segera Hadir</div>
+</div>
+</div>
+<div class="roadmap-item">
+<div class="roadmap-dot"></div>
+<div class="roadmap-card">
+<span class="roadmap-phase">Phase 4 — Q4 2025</span>
+<h3>Mobile App</h3>
+<p>Aplikasi mobile Android & iOS dengan fitur offline-first untuk daerah terpencil.</p>
+<div class="roadmap-status upcoming">○ Planned</div>
+</div>
+</div>
+<div class="roadmap-item">
+<div class="roadmap-dot"></div>
+<div class="roadmap-card">
+<span class="roadmap-phase">Phase 5 — 2026</span>
+<h3>Blockchain Ecosystem</h3>
+<p>Peluncuran token, staking, governance, dan DeFi untuk ekosistem pertanian.</p>
+<div class="roadmap-status upcoming">○ Planned</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="#" class="navbar-brand">
+<span class="brand-icon">🌾</span>
+<span class="brand-text">NusaTani</span>
+</a>
+<p class="footer-tagline">Membangun Masa Depan Pertanian Indonesia</p>
+<div class="footer-socials">
+<a href="#" class="social-link">𝕏</a>
+<a href="#" class="social-link">in</a>
+<a href="#" class="social-link">📘</a>
+<a href="#" class="social-link">▶</a>
+</div>
+</div>
+<div class="footer-links-group">
+<h4>Platform</h4>
+<a href="#features">Fitur</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#ai">AI Agriculture</a>
+<a href="#">Marketplace</a>
+</div>
+<div class="footer-links-group">
+<h4>Komunitas</h4>
+<a href="#community">Forum</a>
+<a href="#">Blog</a>
+<a href="#">Event</a>
+<a href="#">Program Petani</a>
+</div>
+<div class="footer-links-group">
+<h4>Perusahaan</h4>
+<a href="#">Tentang Kami</a>
+<a href="#">Karir</a>
+<a href="#">Kontak</a>
+<a href="#">Press Kit</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 NusaTani. Seluruh hak dilindungi.</p>
+<div class="footer-bottom-links">
+<a href="#">Kebijakan Privasi</a>
+<a href="#">Syarat & Ketentuan</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
